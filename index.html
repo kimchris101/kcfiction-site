@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kim Christian — Stories that talk back</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand">
+        <span class="brand-dot"></span>
+        <span class="brand-text">Kim Christian</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu">
+        <ul class="nav-list">
+          <li><a href="#home" class="nav-link">Home</a></li>
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#cta" class="nav-link">Works</a></li>
+        </ul>
+        <a href="#cta" class="btn btn-primary nav-cta">Read latest</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Currently editing: <strong>Book 2 — "Serpent in the Sanctuary"</strong></span>
+      </div>
+
+      <h1 class="hero-title">
+        Stories that <span class="highlight">talk back.</span><br />
+        Worlds that stay <em>with you.</em>
+      </h1>
+
+      <p class="hero-description">
+        Hi, I'm Kim Christian. This is where I collect my creative and interactive writing — branching narratives, slow character studies, and small experiments in fiction you can actually play with.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#features" class="btn btn-primary">Explore my writing</a>
+        <a href="#about" class="btn btn-secondary">About me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section (What I Write) -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-tag">What I write</p>
+        <h2 class="section-title">Six flavors of the same obsession.</h2>
+        <p class="section-subtitle">
+          I keep landing in the same territory from different angles. Here's the map of the places my writing tends to end up.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="card-icon">🔀</div>
+          <h3>Branching Narratives</h3>
+          <p>Stories that fork, weave and reunite. Every choice a reader makes writes a new version of the ending.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-icon">🌍</div>
+          <h3>Living Worlds</h3>
+          <p>Deeply detailed settings — languages, factions, weather patterns — that keep breathing after the page ends.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-icon">📖</div>
+          <h3>Serial Fiction</h3>
+          <p>Weekly chapters posted with cliffhangers designed to make you check back Monday morning.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-icon">🎭</div>
+          <h3>Character Studies</h3>
+          <p>Slow, honest portraits of people who feel more like neighbors than characters.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-icon">☕</div>
+          <h3>Micro-fiction</h3>
+          <p>Tiny 100-word stories written in coffee shop margins. Small enough to fit, sharp enough to stay.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="card-icon">🎲</div>
+          <h3>Interactive Prompts</h3>
+          <p>Writing games and prompts you can jump into — no experience needed, just curiosity.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container about-container">
+      <p class="section-tag">About</p>
+      <h2 class="section-title">A hobby I take seriously.</h2>
+      <p class="about-text">
+        I've been writing since middle school — mostly for me, sometimes for a small circle of readers who keep asking "what happens next?" I love stories that don't sit still: choose-your-path fiction, worlds you can wander, and characters that surprise you. This page is a home for those experiments.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA / Newsletter Section -->
+  <section id="cta" class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <h2>Want the next chapter in your inbox?</h2>
+        <p>One email, every other Monday. New fiction, a peek at what I'm drafting, and an occasional prompt for you to try.</p>
+        <form class="cta-form" id="subscribeForm">
+          <input type="email" placeholder="Enter your email address" required />
+          <button type="submit" class="btn btn-primary">Subscribe for free</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <span class="brand-dot"></span>
+        <span>Kim Christian</span>
+      </div>
+
+      <div class="footer-socials">
+        <a href="#" aria-label="X (Twitter)">X</a>
+        <a href="#" aria-label="TikTok">TikTok</a>
+        <a href="#" aria-label="Discord">Discord</a>
+      </div>
+
+      <p class="copyright">© 2026 Kim Christian. All words reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
