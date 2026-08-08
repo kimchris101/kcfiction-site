@@ -1,4 +1,6 @@
-/* --- Root Theme Variables --- */
+/* ==========================================================================
+   1. Root Theme Variables & Resets
+   ========================================================================== */
 :root {
   --bg-color: #0b0f19;
   --bg-card: #131b2e;
@@ -14,7 +16,6 @@
   --container-max: 1100px;
 }
 
-/* --- Global Resets --- */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -45,7 +46,9 @@ a {
   text-decoration: none;
 }
 
-/* --- Navigation --- */
+/* ==========================================================================
+   2. Header & Navigation
+   ========================================================================== */
 .navbar {
   position: fixed;
   top: 0;
@@ -118,7 +121,9 @@ a {
   transition: 0.3s;
 }
 
-/* --- Buttons --- */
+/* ==========================================================================
+   3. Buttons & Interactive Elements
+   ========================================================================== */
 .btn {
   display: inline-block;
   padding: 0.75rem 1.5rem;
@@ -152,7 +157,9 @@ a {
   transform: translateY(-2px);
 }
 
-/* --- Hero Section --- */
+/* ==========================================================================
+   4. Hero Section
+   ========================================================================== */
 .hero-section {
   padding: 10rem 0 6rem 0;
   text-align: center;
@@ -217,7 +224,9 @@ a {
   gap: 1rem;
 }
 
-/* --- Features Section --- */
+/* ==========================================================================
+   5. Features Grid ("What I Write")
+   ========================================================================== */
 .features-section {
   padding: 6rem 0;
 }
@@ -283,149 +292,9 @@ a {
   font-size: 0.95rem;
 }
 
-/* --- About Section --- */
-.about-section {
-  padding: 6rem 0;
-  text-align: center;
-}
-
-.about-container {
-  max-width: 750px;
-  background: rgba(19, 27, 46, 0.5);
-  border: 1px solid var(--border-color);
-  border-radius: 24px;
-  padding: 3.5rem 2.5rem;
-}
-
-.about-text {
-  color: var(--text-muted);
-  font-size: 1.15rem;
-  line-height: 1.8;
-  margin-top: 1rem;
-}
-
-/* --- CTA Section --- */
-.cta-section {
-  padding: 6rem 0;
-}
-
-.cta-card {
-  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(236, 72, 153, 0.15));
-  border: 1px solid rgba(168, 85, 247, 0.3);
-  border-radius: 24px;
-  padding: 4rem 2rem;
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.cta-card h2 {
-  font-family: var(--font-serif);
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.cta-card p {
-  color: var(--text-muted);
-  margin-bottom: 2rem;
-}
-
-.cta-form {
-  display: flex;
-  justify-content: center;
-  gap: 0.75rem;
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.cta-form input[type="email"] {
-  flex: 1;
-  padding: 0.8rem 1.2rem;
-  border-radius: 9999px;
-  border: 1px solid var(--border-color);
-  background: rgba(11, 15, 25, 0.8);
-  color: var(--text-main);
-  font-size: 0.95rem;
-  outline: none;
-}
-
-.cta-form input[type="email"]:focus {
-  border-color: var(--accent-purple);
-}
-
-/* --- Footer --- */
-.footer {
-  border-top: 1px solid var(--border-color);
-  padding: 3rem 0;
-  color: var(--text-muted);
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  color: var(--text-main);
-}
-
-.footer-socials {
-  display: flex;
-  gap: 1.5rem;
-}
-
-.footer-socials a:hover {
-  color: var(--accent-purple);
-}
-
-.copyright {
-  font-size: 0.9rem;
-}
-
-/* --- Mobile Responsiveness --- */
-@media (max-width: 768px) {
-  .nav-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    background: var(--bg-color);
-    flex-direction: column;
-    padding: 2rem;
-    gap: 1.5rem;
-    border-bottom: 1px solid var(--border-color);
-    display: none;
-  }
-
-  .nav-menu.active {
-    display: flex;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .nav-toggle {
-    display: flex;
-  }
-
-  .cta-form {
-    flex-direction: column;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    gap: 1.5rem;
-    text-align: center;
-  }
-}
-/* --- Works & Cards Section --- */
+/* ==========================================================================
+   6. Works Section & Dynamic Story Cards
+   ========================================================================== */
 .works-section {
   padding: 6rem 0;
 }
@@ -542,7 +411,143 @@ a {
   flex-grow: 1;
 }
 
-/* --- Embed Modal Styles --- */
+/* ==========================================================================
+   7. CSS Filters (Spotlight Image) & Stats Table
+   ========================================================================== */
+.stats-section {
+  padding: 6rem 0;
+}
+
+.spotlight-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 2.5rem;
+  margin-bottom: 4rem;
+}
+
+.spotlight-image-container {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Applying CSS Filters to Image */
+.filtered-image {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  /* Mood style: Grayscale + contrast + brightness adjustment */
+  filter: grayscale(40%) contrast(115%) brightness(85%);
+  transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+/* Dynamic Filter Shift on Hover */
+.spotlight-image-container:hover .filtered-image {
+  filter: grayscale(0%) contrast(105%) brightness(100%) saturate(120%);
+  transform: scale(1.03);
+}
+
+.image-overlay-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(11, 15, 25, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+  padding: 0.4rem 0.9rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* HTML Data Table */
+.table-wrapper {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.table-title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-main);
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.data-table th {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.data-table td {
+  padding: 1.1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+
+.data-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.data-table tbody tr:hover {
+  background: var(--bg-card-hover);
+}
+
+.data-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Table Badges & Status Indicators */
+.table-badge {
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.table-badge.purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; }
+.table-badge.blue { background: rgba(59, 130, 246, 0.15); color: #60a5fa; }
+.table-badge.pink { background: rgba(236, 72, 153, 0.15); color: #f472b6; }
+.table-badge.gray { background: rgba(156, 163, 175, 0.15); color: #d1d5db; }
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.status-dot.active { background: #eab308; box-shadow: 0 0 6px #eab308; }
+.status-dot.ongoing { background: #22c55e; box-shadow: 0 0 6px #22c55e; }
+.status-dot.complete { background: #3b82f6; box-shadow: 0 0 6px #3b82f6; }
+
+/* ==========================================================================
+   8. Embed Modal System
+   ========================================================================== */
 .embed-modal {
   position: fixed;
   top: 0;
@@ -624,4 +629,159 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* ==========================================================================
+   9. About, CTA, and Footer Sections
+   ========================================================================== */
+.about-section {
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.about-container {
+  max-width: 750px;
+  background: rgba(19, 27, 46, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 3.5rem 2.5rem;
+}
+
+.about-text {
+  color: var(--text-muted);
+  font-size: 1.15rem;
+  line-height: 1.8;
+  margin-top: 1rem;
+}
+
+.cta-section {
+  padding: 6rem 0;
+}
+
+.cta-card {
+  background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(236, 72, 153, 0.15));
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  border-radius: 24px;
+  padding: 4rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-card h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-card p {
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.cta-form {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.cta-form input[type="email"] {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border-radius: 9999px;
+  border: 1px solid var(--border-color);
+  background: rgba(11, 15, 25, 0.8);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.cta-form input[type="email"]:focus {
+  border-color: var(--accent-purple);
+}
+
+.footer {
+  border-top: 1px solid var(--border-color);
+  padding: 3rem 0;
+  color: var(--text-muted);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.footer-socials {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.footer-socials a:hover {
+  color: var(--accent-purple);
+}
+
+.copyright {
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   10. Media Queries / Responsive Rules
+   ========================================================================== */
+@media (max-width: 768px) {
+  .nav-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    display: none;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .spotlight-card {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+
+  .filtered-image {
+    height: 220px;
+  }
+
+  .cta-form {
+    flex-direction: column;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
 }
