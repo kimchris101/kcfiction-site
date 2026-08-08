@@ -112,6 +112,106 @@
     </div>
   </section>
 
+  <!-- Works & Interactive Embeds Section -->
+<section id="works" class="works-section">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-tag">Featured Works</p>
+      <h2 class="section-title">Play, read, and explore.</h2>
+      <p class="section-subtitle">
+        Filter through interactive experiments or launch embeds directly inside your browser.
+      </p>
+
+      <!-- Category Filter Buttons -->
+      <div class="filter-controls">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="interactive">Interactive / Twine</button>
+        <button class="filter-btn" data-filter="serial">Serials</button>
+        <button class="filter-btn" data-filter="audio">Audio & Media</button>
+      </div>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="works-grid">
+      
+      <!-- Card 1: Interactive Twine Story -->
+      <article class="work-card" data-category="interactive">
+        <div class="card-media">
+          <span class="card-badge">Interactive</span>
+          <div class="card-placeholder-art purple-glow">
+            <span class="art-icon">🔮</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">15-min playthrough • 4 Endings</div>
+          <h3 class="card-title">Serpent in the Sanctuary</h3>
+          <p class="card-desc">
+            A choice-driven investigation into an ancient relic. Every decision alters your companion's trust.
+          </p>
+          <button class="btn btn-primary open-embed-btn" data-embed-title="Serpent in the Sanctuary" data-embed-url="https://html5.gamedistribution.com/rvvASnd3d120935510619/">
+            Play Embed <span>▶</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 2: Audio / Ambient Track -->
+      <article class="work-card" data-category="audio">
+        <div class="card-media">
+          <span class="card-badge">Soundtrack</span>
+          <div class="card-placeholder-art pink-glow">
+            <span class="art-icon">🎧</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">Writing Soundtrack • 3 min</div>
+          <h3 class="card-title">Echoes of the Obsidian Library</h3>
+          <p class="card-desc">
+            An atmospheric ambient audio track composed to accompany Chapter 4 of Book 2.
+          </p>
+          <button class="btn btn-secondary open-embed-btn" data-embed-title="Echoes Audio Preview" data-embed-url="https://www.youtube-nocookie.com/embed/5qap5aO4i9A">
+            Listen Now <span>🎵</span>
+          </button>
+        </div>
+      </article>
+
+      <!-- Card 3: Serial Story Card -->
+      <article class="work-card" data-category="serial">
+        <div class="card-media">
+          <span class="card-badge">Serial</span>
+          <div class="card-placeholder-art blue-glow">
+            <span class="art-icon">📜</span>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-meta">Weekly Serial • Chapter 12 Live</div>
+          <h3 class="card-title">The Glass Archipelago</h3>
+          <p class="card-desc">
+            A weekly fantasy serial following a crew navigating islands made entirely of crystalline dust.
+          </p>
+          <a href="#cta" class="btn btn-secondary">Read latest chapter</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- Interactive Embed Modal -->
+<div class="embed-modal" id="embedModal" aria-hidden="true">
+  <div class="modal-overlay" id="modalOverlay"></div>
+  <div class="modal-container">
+    <div class="modal-header">
+      <h3 id="modalTitle">Interactive Embed</h3>
+      <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+    </div>
+    <div class="modal-body">
+      <div class="iframe-wrapper">
+        <iframe id="embedIframe" src="" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
   <!-- About Section -->
   <section id="about" class="about-section">
     <div class="container about-container">
